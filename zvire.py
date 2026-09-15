@@ -4,33 +4,33 @@ class Zvire:
         self.vek = vek
         self.misto = misto
         pass
+    def zvuk(self):
+        return "???"
 
-def zvuk(self):
-    return "???"
+    def predstavSe(self):
+        return f"Jmenuji se {self.jmeno}, je mi {self.vek} let."
 
-def predstav_se(self):
-    return f"Jmenuji se {self.jmeno} a je mi {self.vek}"
+    def kdeJsi(self):
+        return f"Jsem v místě zvaném {self.misto}"
 
-def kde_jsi(self):
-    return f"jsem v {self.misto}"
+    def jdiNa(self, nMisto:str):
+        self.misto = nMisto
+        return f"Přesunul jsem se na {nMisto}. {self.kdeJsi()}"
 
-def jdi_na(self, nMisto:str):
-    self.misto = nMisto
-    return f"Přesunul jsem se na {nMisto}"
 
-zvire = Zvire("Šoral",50)
+zvire = Zvire("Luděk", 22)
 print(zvire.jmeno)
 print(zvire.vek)
-print(zvire.misto)
-print(zvire.zvuk("???"))
-print(zvire.predstav_se())
-print(zvire.kde_jsi())
-print(zvire.jdi_na("Kadeřnictví"))
+print(zvire.zvuk())
+print(zvire.predstavSe())
+print(zvire.kdeJsi())
+print(zvire.jdiNa("Škola"))
 
-zvire2 = Zvire("Wolfram", 32, "PentHouse")
+zvire2 = Zvire("Amálka", 5, "na zahradě")
 print(zvire2.jmeno)
 print(zvire2.vek)
 print(zvire2.misto)
-print(zvire2.predstav_se())
 print(zvire2.zvuk())
-print(zvire2.jdi_na("Klokánek"))
+print(zvire2.predstavSe())
+print(zvire2.kdeJsi())
+print(zvire2.jdiNa("oběd"))
